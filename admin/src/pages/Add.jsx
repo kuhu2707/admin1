@@ -133,6 +133,9 @@ const Add = ({token}) => {
       <div>
         <p className='mb-2'>Products Sizes</p>
         <div className='flex gap-3'>
+           <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter(item =>item!== "S") : [...prev,"XS"])}>
+                <p className={`${sizes.includes("XS") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>XS</p>
+            </div>
             <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter(item =>item!== "S") : [...prev,"S"])}>
                 <p className={`${sizes.includes("S") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>S</p>
             </div>

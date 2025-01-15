@@ -9,6 +9,7 @@ const Login = ({setToken}) => {
 
 
     const onSubmitHandlre = async(e)=>{
+        console.log("login successfull")
         try {
           e.preventDefault();
           const response = await axios.post('https://kuhuecom.onrender.com/api/user/admin',{email,password})
